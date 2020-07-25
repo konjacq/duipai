@@ -47,3 +47,8 @@ If the compilation is successful and you want to end the operation, press `Ctrl+
 - [ ] 增加查看运行时间功能.
 - [ ] 重定向`mk_data.cpp`的I/O.
 - [ ] 更好看的输出界面.
+
+## License
+
+This project is licensed under the terms of the [WTFPL](https://github.com/anak10thn/WTFPL) license.  
+license:wtfpl
