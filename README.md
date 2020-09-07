@@ -15,11 +15,11 @@ Please put the entire folder wherever convenient.
 
 ### 准备 Preparation
 
-将要验证的代码和正确的代码分别命名为`test.cpp`和`right.cpp`并放在`source`文件夹下.  
-Name the code to be verified and the correct code as `test.cpp` and `right.cpp` and put them in the `source` folder.
+将要验证的代码,正确的代码和数据生成器分别命名为`test.cpp`,`right.cpp`,`mk_data.cpp`并放在`source`文件夹下.  
+The code to be verified, the correct code and the data generator are respectively named `test.cpp`, `right.cpp`, `mk_data.cpp` and placed in the `source` folder.
 
-修改`source/mk_data.cpp`,在其中生成数据,将生成的输入数据输出到`testdata.in`(已配置`freopen`).  
-Modify `source/mk_data.cpp`, generate data in it, and output the generated input data to `testdata.in` (`freopen` is configured).
+`random.h`提供了随机数模板`setseed(int)`用于确定种子,缺省参数时自动生成;`random(int,int)`返回一个[L,R)内的整数.  
+`random.h` provides a random number template `setseed(int)` to determine the seed, which is automatically generated when the default parameters are; `random(int,int)` returns an integer within (L,R).
 
 ### 运行 Run
 
@@ -35,17 +35,17 @@ If the compilation is successful and you want to end the operation, press `Ctrl+
 - 否则可以在`testlog.txt`中找到错误信息,包括:
   - 错误点编号;
   - 对应保存的数据点编号.
-- 错误数据保存在`testdata`目录下,第`i`个点命名为`testdatax.in/out/ans`.
+- 错误数据保存在`testdata`目录下,第`i`个点命名为`testdatai.in/out/ans`.
 - If the compilation is wrong, you can find the compilation information in `compinfo.txt`.
 - Otherwise, you can find error messages in `testlog.txt`, including:
   - Error point number;
   - Corresponding to the saved data point number.
-- The error data is saved in the `testdata` directory, and the `i` point is named as `testdatax.in/out/ans`.
+- The error data is saved in the `testdata` directory, and the `i` point is named as `testdatai.in/out/ans`.
 
 ## TODO
 
 - [ ] 增加查看运行时间功能.
-- [ ] 重定向`mk_data.cpp`的I/O.
+
 - [ ] 更好看的输出界面.
 
 ## License

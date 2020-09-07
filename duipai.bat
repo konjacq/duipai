@@ -1,6 +1,9 @@
 @echo off
 echo Start.
 del /q testdata >nul 2>nul
+del mk_data.exe >nul 2>nul
+del test.exe >nul 2>nul
+del right.exe >nul 2>nul
 del compinfo.txt >nul 2>nul
 copy nul compinfo.txt >nul 2>nul
 del testlog.txt >nul 2>nul
@@ -38,7 +41,7 @@ echo Accpet test %t%!
 set /a t+=1
 echo Running on test %t%...
 echo Running on mk_data.exe...
-source\mk_data.exe >nul 2>nul
+source\mk_data.exe >testdata.in
 echo Running on test.exe...
 source\test.exe <testdata.in >testdata.out
 echo Running on right.exe...
