@@ -11,11 +11,11 @@ md testdata >nul 2>nul
 set /a t = 0 >nul 2>nul
 set /a c = 0 >nul 2>nul
 echo Compiling mk_data.cpp...
-g++ -o source\mk_data.exe source\mk_data.cpp -Ofast -std=c++11 -Wall -Wextra -Wl,--stack=536870912 2>compinfo.txt
+g++ -o source\mk_data.exe source\mk_data.cpp -Ofast -std=c++2a -Wl,--stack=1073741824 -Wall -Wextra -Wno-misleading-indentation -Wshadow 2>compinfo.txt
 echo Compiling test.cpp...
-g++ -o source\test.exe source\test.cpp -Ofast -std=c++11 -Wall -Wextra -Wl,--stack=536870912 2>>compinfo.txt
+g++ -o source\test.exe source\test.cpp -Ofast -std=c++2a -Wl,--stack=1073741824 -Wall -Wextra -Wno-misleading-indentation -Wshadow 2>>compinfo.txt
 echo Compiling right.cpp...
-g++ -o source\right.exe source\right.cpp -Ofast -std=c++11 -Wall -Wextra -Wl,--stack=536870912 2>>compinfo.txt
+g++ -o source\right.exe source\right.cpp -Ofast -std=c++2a -Wl,--stack=1073741824 -Wall -Wextra -Wno-misleading-indentation -Wshadow 2>>compinfo.txt
 if not exist source\mk_data.exe goto lp3
 if not exist source\test.exe goto lp3
 if not exist source\right.exe goto lp3

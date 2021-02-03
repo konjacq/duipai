@@ -1,9 +1,7 @@
 #ifndef __RANDOM_H__
 #define __RANDOM_H__
 
-#include <algorithm>
-#include <cstdio>
-#include <cstdlib>
+#include <bits/stdc++.h>
 #include <windows.h>
 using namespace std;
 
